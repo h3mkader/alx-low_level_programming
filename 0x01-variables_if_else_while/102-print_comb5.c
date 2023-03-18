@@ -8,7 +8,7 @@ int main(void)
 {
 int nums;
 int nums1;
-int counter=0;
+int counter = 0;
 
 for (nums = '0'; nums <= '9'; nums++)
 {
@@ -19,7 +19,7 @@ putchar(nums);
 putchar(nums1);
 if (nums == '9' && nums1 == '9')
 continue;
-if (counter==2)
+if (counter == 2)
 {
 putchar(',');
 counter=0;
