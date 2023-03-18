@@ -8,23 +8,25 @@ int main(void)
 {
 int nums;
 int nums1;
-int nums2;
+int counter=0;
 
-for (nums = '0'; nums <= '7'; nums++)
+for (nums = '0'; nums <= '9'; nums++)
 {
-for (nums1 = nums + 1; nums1 <= '9'; nums1++)
+for (nums1 = '0'; nums1 <= '9'; nums1++)
 {
-for (nums2 = nums1 + 1; nums2 <= '9'; nums2++)
-{
+counter++;
 putchar(nums);
 putchar(nums1);
-putchar(nums2);
-if (nums == '7' && nums1 == '8' && nums2 == '9')
-break;
+if (nums == '9' && nums1 == '9')
+continue;
+if (counter==2)
+{
 putchar(',');
+counter=0;
+}
 putchar(' ');
 }
-}
+
 }
 putchar('\n');
 return (0);
